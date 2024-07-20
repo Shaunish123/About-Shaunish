@@ -128,7 +128,6 @@ body{
     display: flex;
     flex-direction: column;
     height: 170vh;
-    margin-bottom: 10%;
     background: linear-gradient(210deg, #f6fb7a, #BA6CD6);
     background-size: 400% 400%;
     -webkit-animation: AnimationName 8s ease infinite;

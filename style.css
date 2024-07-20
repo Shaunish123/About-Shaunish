@@ -128,7 +128,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 290vh;
+    height: 170vh;
     background: linear-gradient(210deg, #f6fb7a, #BA6CD6);
     background-size: 400% 400%;
     -webkit-animation: AnimationName 8s ease infinite;
@@ -152,35 +152,41 @@ body{
     letter-spacing: 2px;
 }
 
+
+ .projects{
+    font-family: 'Martel', serif;
+    font-weight: 400;
+    font-size: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+
+.projects>div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+}
+
+
 .projects img{
     border: 5px dotted white;
     width: 400px;
     height: 200px;
-    float: left;
-    margin: 50px;
+    margin-right: 20px ;
 }
 
- .projects{
-    display: flex ; 
-    flex-direction: column;
-    justify-content: space-evenly;
-    text-align: center;
-    font-family: 'Martel', serif;
-    font-weight: 400;
-    font-size: 1rem;
-}
-
-#html-portfolio, #resume-website, #flag, #mondrian-painting, #Tindog-project, #About-Shaunish{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
 
 .Project-heading {
+    text-decoration: none;
+    color: black;
     display: block;
     padding-right: 50px;
     font-family: 'Karla', sans-serif;
-    font-weight: 700;
+    font-weight: 900;
     font-size: 1.75rem;
 }
 

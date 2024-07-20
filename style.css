@@ -379,7 +379,7 @@ footer{
         display: flex;
         flex-direction: column;
         margin-bottom: 10%;
-        height: 380vh;
+        height: 250%;
     }
     
     #title{

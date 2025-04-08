@@ -1,7 +1,8 @@
 *{
-    margin: 0%;
-    padding: 0%;
-    border: 0%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
 }
 
 .animation{
@@ -12,6 +13,9 @@
 
 body{
     background-color: #FFFED3;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
 }
 
 .background{
@@ -20,7 +24,7 @@ body{
     height: 100vh;
     background-image: url(./Images/Head_Image.png);
     background-size: cover;
-    background-position: center ;
+    background-position: center;
 }
 
 .heading-text{
@@ -45,18 +49,20 @@ body{
     text-transform: lowercase;
     text-decoration: underline;
     padding-bottom: 0.2rem;
-    text-decoration-thickness: 0.2rem ;
+    text-decoration-thickness: 0.2rem;
     text-underline-offset: 5px;
 }
 
 #About-me{
     display: flex;
     flex-direction: row;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    height: 65vh;
+    height: auto;
+    min-height: 65vh;
     background-color: #B4E380;
+    padding: 2rem;
 }
 
 
@@ -64,10 +70,12 @@ body{
     border-radius: 50%;
     height: 20rem;
     width: 20rem;
+    object-fit: cover;
 }
 
 #description{
     width: 40%;
+    padding: 0 1rem;
 }
 
 #description h2{
@@ -89,12 +97,14 @@ body{
 #Credentials{
     background-color: #88D66C;
     width: 100%;
-    height: 80vh;
+    height: auto;
+    min-height: 80vh;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     color: white;
+    padding: 2rem;
 }
 
 #header{
@@ -111,6 +121,7 @@ body{
 
 #content ul{
     margin-bottom: 50px;
+    padding-left: 1.5rem;
 }
 
 #content h3{
@@ -122,19 +133,22 @@ body{
     font-family: "Crimson Text", serif;
     font-weight: 400;
     font-style: normal;
+    padding: 0 1rem;
 }
 
 #my-work{
     display: flex;
     flex-direction: column;
     margin-bottom: 10%;
-    height: 170vh;
+    height: auto;
+    min-height: 100vh;
     background: linear-gradient(210deg, #f6fb7a, #BA6CD6);
     background-size: 400% 400%;
     -webkit-animation: AnimationName 8s ease infinite;
     -moz-animation: AnimationName 8s ease infinite;
     -o-animation: AnimationName 8s ease infinite;
     animation: AnimationName 8s ease infinite;
+    padding-bottom: 2rem;
 }
 
 #title{
@@ -142,7 +156,7 @@ body{
     font-family: 'Karla', sans-serif;
     font-weight: 700;
     font-size: 2.5rem;
-    padding: 100px;
+    padding: 4rem 2rem;
 }
 
 #title h3{
@@ -153,14 +167,15 @@ body{
 }
 
 
- .projects{
+.projects{
     font-family: 'Martel', serif;
     font-weight: 400;
     font-size: 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 50px;
+    gap: 2rem;
+    width: 90%;
+    margin: 0 auto;
 }
 
 
@@ -168,15 +183,19 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 20px;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
 }
 
 
 .projects img{
     border: 5px dotted white;
-    width: 400px;
-    height: 200px;
-    margin-right: 20px ;
+    width: 300px;
+    height: auto;
+    max-height: 200px;
+    margin-right: 20px;
+    object-fit: cover;
 }
 
 
@@ -195,10 +214,10 @@ body{
     height: 100vh;
     background-image: url(./Images/Contact-Me.png);
     background-size: cover;
-    background-position: center ;
+    background-position: center;
     display: flex;
     flex-direction: column;
-    text-align: left;
+    text-align: center;
     justify-content: center;
     align-items: center;
     font-size: 6rem;
@@ -207,12 +226,14 @@ body{
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: 800;
+    padding: 1rem;
 }
 
 #Contact a{
     font-size: 3rem;
     color: #252521;
     text-decoration: none;
+    word-break: break-word;
 }
 
 #links{
@@ -220,20 +241,27 @@ body{
     color: white;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    height: 8vh;
+    justify-content: center;
+    height: auto;
+    min-height: 8vh;
     align-items: center;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 800;
     font-style: normal;
+    padding: 1rem;
+}
+
+#links ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #links li{
     display: inline-block;
     list-style: none;
-    padding-left: 80px;
-    padding-right: 80px;
+    padding: 0.5rem 2rem;
 }
 
 #links>ul>li>a{
@@ -246,15 +274,25 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 5vh;
+    height: auto;
+    min-height: 5vh;
     align-items: center;
-    margin-bottom: 0%;
+    margin-bottom: 0;
     font-family: "Crimson Text", serif;
     font-weight: 400;
     font-style: normal;
     font-size: 20px;
+    padding: 1rem;
+    text-align: center;
 }
 
+/* Fix image responsiveness */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Animations */
 @keyframes appear{
     from {
         opacity: 0;
@@ -266,219 +304,221 @@ footer{
       }
 }
 
-@-webkit-keyframes AnimationName {
-    0%{background-position:50% 0%}
-    50%{background-position:50% 100%}
-    100%{background-position:50% 0%}
-}
-@-moz-keyframes AnimationName {
-    0%{background-position:50% 0%}
-    50%{background-position:50% 100%}
-    100%{background-position:50% 0%}
-}
-@-o-keyframes AnimationName {
-    0%{background-position:50% 0%}
-    50%{background-position:50% 100%}
-    100%{background-position:50% 0%}
-}
 @keyframes AnimationName {
     0%{background-position:50% 0%}
     50%{background-position:50% 100%}
     100%{background-position:50% 0%}
 }
 
-@media (max-width: 450px) {
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+    .heading-text {
+        left: 3rem;
+        font-size: 2.8rem;
+    }
 
-    .background{
-        width: 100%;
+    .heading-text > p {
+        font-size: 2rem;
+    }
+
+    #description {
+        width: 50%;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .heading-text {
+        left: 2rem;
+        font-size: 2.2rem;
     }
     
-    .heading-text{
-        display: flex;
+    .heading-text > p {
+        font-size: 1.7rem;
+    }
+    
+    #About-me {
         flex-direction: column;
+        padding: 3rem 1.5rem;
+    }
+
+    .myimg {
+        height: 15rem;
+        width: 15rem;
+        margin-bottom: 2rem;
+    }
+
+    #description {
+        width: 90%;
+        text-align: center;
+    }
+
+    #Credentials {
+        flex-direction: column;
+        padding: 3rem 1.5rem;
+    }
+
+    #header {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    #content {
+        width: 90%;
+        padding: 0 1rem;
+    }
+    
+    #title {
+        padding: 3rem 1.5rem;
+        font-size: 2rem;
+    }
+    
+    .projects {
+        width: 95%;
+    }
+    
+    .projects > div {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .projects img {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+        width: 80%;
+    }
+
+    .Project-heading {
+        padding-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    #Contact {
+        font-size: 4rem;
+    }
+
+    #Contact a {
+        font-size: 2rem;
+        margin: 1rem 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .background {
+        height: 90vh;
+    }
+    
+    .heading-text {
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 90vh;
+        display: flex;
         justify-content: center;
-        position:absolute;
-        font-family: 'Karla', sans-serif;
-        font-weight: 700;
-        font-size: 3.5rem;
-        text-transform: uppercase;
-        word-spacing: 0.1rem;
-        color:indigo;
-        height: 100vh;
         align-items: center;
         text-align: center;
-        left: 20%;
+        font-size: 1.5rem;
+        padding: 0 1rem;
+    }
+    
+    .heading-text > p {
         font-size: 1.1rem;
     }
     
-    .heading-text>p{
-        font-size: 1rem;
-        text-align: center;
+    #About-me {
+        padding: 2rem 1rem;
     }
-
-    #About-me{
-        flex-direction: column;
-        align-items: center;
+    
+    .myimg {
+        height: 10rem;
+        width: 10rem;
+    }
+    
+    #description {
         width: 100%;
-        height: 140vh;
     }
     
-    
-    .myimg{
-        height: 9rem;
-        width: 9rem;
+    #description h2 {
+        font-size: 1.8rem;
     }
     
-    #description{
-        width: 50%;
-    }
-    
-    #description h2{
-      font-size: 2rem;
-      padding-bottom: 1rem;
-      text-align: center;
-    }
-    
-    #description p{
+    #description p {
         font-size: 1rem;
-        line-height: 1.2rem;
-        text-align: center;
-    }
-
-    #Credentials{
-        width: 100%;
-        height: 120vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        line-height: 1.5rem;
     }
     
-    #header{
-        font-size: 25px;
-        text-align: center;
+    #Credentials {
+        padding: 2rem 1rem;
     }
-    #content hr{
+    
+    #header {
+        font-size: 1.8rem;
+    }
+    
+    #content {
+        width: 100%;
+        font-size: 1rem;
+    }
+    
+    #content h3 {
+        font-size: 1.2rem;
+        margin-top: 1.5rem;
+    }
+    
+    #content hr {
         border: 2px dotted white;
     }
     
-    #content ul{
-        margin-bottom: 30px;
+    #title {
+        padding: 2rem 1rem;
+        font-size: 1.5rem;
     }
     
-    #content h3{
-        margin-top: 30px;
-        font-size: 120%;
-    }
-    
-    #content{
-        width: 80%;
-        font-size: 100%;
-    }
-
-    #my-work{
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 10%;
-        height: fit-content;
-    }
-    
-    #title{
-        text-align: center;
-        font-family: 'Karla', sans-serif;
-        font-weight: 700;
-        font-size: 2rem;
-        padding: 20px;
-    }
-    
-    #title h3{
-        font-family: 'Martel', serif;
-        font-weight: 800;
-        font-size: 15px;
-        letter-spacing: 2px;
-    }
-    
-    
-     .projects{
-        font-family: 'Martel', serif;
-        font-weight: 400;
+    #title h3 {
         font-size: 1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
     }
     
-    
-    .projects>div{
-        display: flex;
-        flex-direction: column;
-        width: 70%;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-        font-size: 15px;
+    .projects {
+        width: 100%;
+        gap: 1.5rem;
     }
     
-    
-    .projects img{
-        border: 5px dotted white;
-        width: 80%;
-        height: 110px;
-        margin-right: 20px ;
-        align-self: center;
+    .projects > div {
+        width: 100%;
+        padding: 1rem;
+        margin: 0;
     }
-    
     
     .Project-heading {
-        text-align: center;
-        font-size: 20px;
+        font-size: 1.2rem;
     }
-
-    #Contact{
+    
+    #Contact {
         font-size: 2rem;
+        height: 90vh;
     }
     
-    #Contact a{
+    #Contact a {
         font-size: 1rem;
-        color: #252521;
-        text-decoration: none;
     }
     
-    #links{
-        background-color: #EECEB9;
-        color: white;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        height: 10vh;
-        align-items: center;
-        font-size: 15px;
+    #links li {
+        padding: 0.5rem 1rem;
     }
     
-    #links li{
-        display: flex;
-        text-align: center;
-        list-style: none;
-        padding-left: 80px;
-        padding-right: 80px;
+    footer {
+        font-size: 0.9rem;
     }
-    
-    #links>ul>li>a{
-        text-decoration: none;
-        color: green;
-    }
-    
-    footer{
-        color: black;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        height: 5vh;
-        align-items: center;
-        margin-bottom: 0%;
-        font-family: "Crimson Text", serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 13px;
-    }
+}
+
+/* Add viewport meta tag to HTML */
+@viewport {
+    width: device-width;
+    initial-scale: 1.0;
 }
